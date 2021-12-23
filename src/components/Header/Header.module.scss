@@ -1,0 +1,45 @@
+.header-title {
+  font-size: 2rem;
+}
+
+.header {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerTitle {
+  color: purple;
+  // font-family: $font-family-display;
+  // font-weight: $font-weight-display-bold;
+  font-size: 2em;
+}
+
+.headerCart {
+
+  button {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    background: transparent;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+
+    svg {
+      color: yellow;
+      margin-right: .5em;
+    }
+
+  }
+
+}
