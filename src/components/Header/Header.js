@@ -6,9 +6,9 @@ function Header() {
     <Container className={styles.headerContainer}>
       <p className={styles['header-title']}>Cardio Store</p>
       <p className={styles.headerCart}>
-        <button>
+        <button className="snipcart-checkout">
           <FaShoppingCart />
-          <span>
+          <span className="snipcart-total-price">
             $0.00
           </span>
         </button>
