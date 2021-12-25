@@ -1,7 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
+import Container from '@components/Container'
+import Button from '@components/Button'
 import styles from '@styles/Home.module.scss'
+import products from '@data/products.json'
+
 
 export default function Home() {
   return (
@@ -13,14 +17,23 @@ export default function Home() {
       </Head>
       <Header />
       <main >
-        <h1>Hyper Bros. Trading Cards</h1>
-        <h2>Available Cards</h2>
-        <ul className={styles.products}>
-          <li><img src="/static/images/bowser.jpg" alt="bowser" /> <h3>Bowser Holographic</h3> <p>$99.99</p></li>
-<li><img src="/static/images/bowser.jpg" alt="bowser" /> <h3>Bowser Holographic</h3> <p>$99.99</p></li>
-<li><img src="/static/images/bowser.jpg" alt="bowser" /> <h3>Bowser Holographic</h3> <p>$99.99</p></li>
-<li><img src="/static/images/bowser.jpg" alt="bowser" /> <h3>Bowser Holographic</h3> <p>$99.99</p></li>
-        </ul>
+        <Container>
+          <h1 >Hyper Bros. Trading Cards</h1>
+          <h2>Available Cards</h2>
+          <ul className={styles.products}>
+            {products.map(product => {
+              return (
+                <li key={product.id}>
+                  <img src={product.image} alt={`Card of ${product.title}`} />
+                  <h3 className={styles.productTitle}>{product.title}</h3>
+                  <p className={styles.productPrice}>$ {product.price}</p>
+                  <p><Button>Add to Cart</Button></p>
+                </li>
+              )
+            })}
+
+          </ul>
+        </Container>
       </main>
 
       <footer className={styles.footer}>
