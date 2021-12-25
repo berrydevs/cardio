@@ -1,3 +1,5 @@
+import styles from '../Container/container.module.scss'
+
 function Container({ children, className, ...rest }) {
   let containerClassName = styles.container
 
